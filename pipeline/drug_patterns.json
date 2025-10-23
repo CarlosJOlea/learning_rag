@@ -1,0 +1,19 @@
+{
+  "drugs": {
+    "libertrim": ["libertrim", "trimebutina"],
+    "ampiquim": ["ampi-quim", "ampiquim", "ampicilina"],
+    "abacavir": ["abacavir"],
+    "actron": ["actron", "ibuprofeno"],
+    "istia": [
+      "istia", "istia shampoo", "istia shampoo tratante",
+      "ácido salicílico", "piroctona olamina", "ictiol"
+    ]
+  },
+  "labs": {
+    "A.F. LABORATORIOS APLICACIONES FARMACÉUTICAS": ["a.f. laboratorios", "aplicaciones farmacéuticas"],
+    "QUÍMICA Y FARMACIA": ["química y farmacia"],
+    "LABORATORIOS DIBA": ["diba"],
+    "BAYER DE MÉXICO": ["bayer", "bayer de méxico"],
+    "DERMATOLÓGICOS DARIER, S.A. DE C.V.": ["dermatológicos darier", "darier", "laboratorios darier"]
+  }
+}
