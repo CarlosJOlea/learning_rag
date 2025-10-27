@@ -1,10 +1,22 @@
-from langchain_ollama import OllamaEmbeddings
-from langchain_huggingface import HuggingFaceEmbeddings
+"""Factory helpers for creating embedding models."""
 
-def load_embeddings():
+from __future__ import annotations
+
+import logging
+from typing import Any
+
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_ollama import OllamaEmbeddings
+
+logger = logging.getLogger(__name__)
+
+
+def load_embeddings() -> Any:
+    """Instantiate the preferred embedding model with a safe fallback."""
+
     try:
-        print("🧠 Embeddings: Ollama (nomic-embed-text)")
+        logger.info("🧠 Embeddings: Ollama (nomic-embed-text)")
         return OllamaEmbeddings(model="nomic-embed-text")
-    except Exception as e:
-        print(f"⚠️ Fallback a MiniLM ({e})")
+    except Exception as exc:  # pragma: no cover - depende de servicios externos
+        logger.warning("⚠️ Fallback a MiniLM (%s)", exc)
         return HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
